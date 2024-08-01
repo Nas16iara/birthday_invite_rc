@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Birthday Invitation</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="disclam">
+      <h1 class="disclamer-text">
+        Has Audio when audio is playing click screen once to stop
+      </h1>
+    </div>
+    <div id="envelope">
+      <div id="back">
+        <svg xmlns="http://www.w3.org/2000/svg" height="300" width="300">
+          <polygon
+            points="0,100 300,100 300,300 0,300"
+            style="fill: #ffd700; stroke: none"
+          />
+        </svg>
+      </div>
+      <div id="front">
+        <svg xmlns="http://www.w3.org/2000/svg" height="300" width="300">
+          <polygon
+            points="0,100 150,200 300,100 300,300 0,300"
+            style="fill: #ff0080; stroke: #ffd700; stroke-width: 3"
+          />
+        </svg>
+      </div>
+      <div id="top">
+        <svg xmlns="http://www.w3.org/2000/svg" height="300" width="300">
+          <polygon
+            points="0,100 150,200 300,100"
+            style="fill: #ff0080; stroke: #ffd700; stroke-width: 2"
+          >
+            <animate
+              id="opentop"
+              attributeName="points"
+              dur="0.5s"
+              fill="freeze"
+              begin="indefinite"
+              from="0,100 150,200 300,100"
+              to="0,100 150,0 300,100"
+            />
+          </polygon>
+        </svg>
+      </div>
+      <div id="letter">
+        <img
+          src="./media/butterfly-ind.png"
+          alt="Butterfly"
+          class="butterfly top-left"
+        />
+        <img
+          src="./media/butterfly-ind.png"
+          alt="Butterfly"
+          class="butterfly top-right"
+        />
+        <img
+          src="./media/butterfly-ind.png"
+          alt="Butterfly"
+          class="butterfly bottom-left"
+        />
+        <img
+          src="./media/butterfly-ind.png"
+          alt="Butterfly"
+          class="butterfly bottom-right"
+        />
+      </div>
+      <button class="open" onclick="openUp()">Click here</button>
+    </div>
+    <div class="reset">
+      <button id="openBtn" onclick="openUp()">Open</button>
+      <button id="reset" onclick="closeUp()">Reset</button>
+      <audio
+        id="background-music"
+        src="./media/Sexyy_Red_-_Get_It_Sexyy_@BaseNaija.mp3"
+        preload="auto"
+      ></audio>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
